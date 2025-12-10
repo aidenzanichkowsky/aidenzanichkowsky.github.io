@@ -1,0 +1,23 @@
+# OS
+Thumbs.db
+.DS_Store
+
+# Node
+node_modules/
+npm-debug.log
+
+# Editor
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Secrets
+.env
+
+# OneDrive temp
+~$*
+
+# Images you may not want to commit (optional)
+*.psd

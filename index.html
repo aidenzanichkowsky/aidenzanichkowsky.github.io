@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aiden Zanichkowsky  Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+    <div class="logo">AZ</div>
+    <nav class="nav">
+      <a href="#projects">Projects</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+    <section class="hero">
+    <div class="hero-text">
+      <h1>Building Solutions. For A Future.</h1>
+      <p>I''m Aiden  a software developer focused on crafting clean, fast, and resilient digital experiences.</p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn">See Projects</a>
+        <a href="#contact" class="btn-outline">Contact</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="rideaurooftoppic.jpg" alt="Aiden Zanichkowsky" class="portrait">
+    </div>
+  </section>
+
+    <section class="about">
+    <div class="about-text">
+      <h2>About</h2>
+      <p>Im an aspiring software dev with sharp attention to detail. I build robust systems, automate the boring, and ship clean user experiences. Recently graduated from Algonquin College (Computer Programming).</p>
+      <p class="muted">Values: clarity, resilience, speed.</p>
+    </div>
+    <div class="skills">
+      <h3>Tech & Skills</h3>
+      <ul>
+        <li>React</li>
+        <li>Node.js</li>
+        <li>Python</li>
+        <li>SQL</li>
+        <li>Git</li>
+        <li>Docker</li>
+      </ul>
+    </div>
+  </section>
+
+    <section id="projects" class="projects">
+    <h2>Selected Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <div>
+          <h3>Project One  Signal Cleaner</h3>
+          <p>A tiny app that processes and visualizes streaming data.</p>
+          <small>React  D3  Node</small>
+        </div>
+      </div>
+     <div class="project-card">
+        <div>
+          <h3>Project Two  Automation Bot</h3>
+          <p>Automation scripts and tools for repetitive workflows.</p>
+          <small>Python  Bash</small>
+        </div>
+        <a href="https://github.com/aidenzanichkowsky/automationbot" target="_blank" rel="noopener noreferrer" class="btn">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <div>
+          <h3>Project Three  Portfolio Engine</h3>
+          <p>This very site  minimal, fast, and future-proof.</p>
+          <small>HTML  CSS  JS</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <section id="resume" class="resume">
+    <h2>Resume</h2>
+    <p>Download a clean PDF version of my resume or view highlights below.</p>
+    <a href="resume.pdf" class="btn">Download PDF</a>
+    <ul>
+      <li>Graduated  Algonquin College, Computer Programming</li>
+      <li>23 years old </li>
+      <li>Based in Ottawa</li>
+    </ul>
+  </section>
+
+    <footer id="contact" class="contact">
+    <h2>Get in Touch</h2>
+    <form id="contactForm" action="https://formspree.io/f/xeoyrgrb" method="POST">
+      <input type="hidden" name="_next" value="index.html">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <div class="links">
+            <a href="https://github.com/aidenzanichkowsky" target="_blank" rel="noopener noreferrer">GitHub</a> 
+      <a href="https://linkedin.com/in/aidenzanichkowsky" target="_blank" rel="noopener noreferrer">LinkedIn</a> 
+      <a href="mailto:aidenzanic@gmail.com">Email</a>
+    </div>
+    <p class="copy"> <span id="year"></span> Aiden Zanichkowsky  Built with clarity.</p>
+  </footer>
+  
+    <div class="gradient-bg"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
