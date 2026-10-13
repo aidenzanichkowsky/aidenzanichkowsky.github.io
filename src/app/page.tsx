@@ -1,6 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
-import { ArrowDown, Search } from "lucide-react";
+import { ArrowDown, ExternalLink } from "lucide-react";
 
 import { PageShell } from "@/components/portfolio/page-shell";
 import { TerminalHero } from "@/components/portfolio/terminal-hero";
@@ -9,7 +8,6 @@ import { projects } from "@/data/portfolio";
 import { LiquidCard } from "@/components/ui/liquid-card";
 import { LiquidButton } from "@/components/ui/liquid-button";
 import { Badge } from "@/components/ui/badge";
-import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import { ResumeModal } from "@/components/portfolio/resume-modal";
 
@@ -45,59 +43,31 @@ export default function HomePage() {
 
       {/* Selected Works Section */}
       <section className="mx-auto w-full max-w-6xl px-6 py-24 md:px-8">
-        <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between mb-12">
-          <div>
-            <h2 className="text-4xl font-bold tracking-tight text-foreground">Selected Works</h2>
-            <p className="mt-3 text-lg text-muted-foreground">A curated collection of recent full-stack and AI projects.</p>
-          </div>
-
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-              <Input
-                placeholder="Search projects..."
-                className="w-full sm:w-64 pl-9 rounded-full bg-secondary/50 border-border/50 focus-visible:ring-1 focus-visible:ring-ring"
-              />
-            </div>
-            <div className="flex gap-2">
-              {['All', 'React', 'Python', 'AI/ML'].map((filter, i) => (
-                <Badge
-                  key={filter}
-                  variant={i === 0 ? "default" : "secondary"}
-                  className={`rounded-full px-4 py-1.5 cursor-pointer ${i !== 0 ? 'bg-secondary/50 hover:bg-secondary' : ''}`}
-                >
-                  {filter}
-                </Badge>
-              ))}
-            </div>
-          </div>
+        <div className="mb-12">
+          <h2 className="text-4xl font-bold tracking-tight text-foreground">Selected Works</h2>
+          <p className="mt-3 text-lg text-muted-foreground">Real projects built with Python and other development tools.</p>
         </div>
-
         <div className="grid gap-8 md:grid-cols-2">
           {projects.map((project) => (
-            <LiquidCard key={project.id} className="group p-0 border-border/50">
-              <div className="aspect-[16/10] overflow-hidden bg-muted relative rounded-t-[24px]">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div className="p-8">
-                <div className="mb-4 flex flex-wrap gap-2">
-                  {project.tags.map(tag => (
-                    <Badge key={tag} variant="secondary" className="bg-secondary/60 rounded-md backdrop-blur-md">
-                      {tag}
-                    </Badge>
-                  ))}
+            <a key={project.id} href={project.href} target="_blank" rel="noopener noreferrer" className="block group">
+              <LiquidCard className="h-full overflow-hidden p-0 border-border/50 transition-transform duration-300 group-hover:-translate-y-1">
+                <div className="flex aspect-[16/10] items-center justify-center rounded-t-[24px] bg-gradient-to-br from-emerald-950 via-slate-900 to-teal-900">
+                  <span className="text-8xl" role="img" aria-label="Animated film frames">🎞️</span>
                 </div>
-                <h3 className="text-2xl font-bold text-foreground">{project.title}</h3>
-                <p className="mt-3 text-muted-foreground line-clamp-2">
-                  {project.summary}
-                </p>
-              </div>
-            </LiquidCard>
+                <div className="p-8">
+                  <div className="mb-4 flex flex-wrap gap-2">
+                    {project.tags.map((tag) => (
+                      <Badge key={tag} variant="secondary" className="rounded-md bg-secondary/60">{tag}</Badge>
+                    ))}
+                  </div>
+                  <h3 className="flex items-center gap-2 text-2xl font-bold text-foreground">
+                    {project.title} <ExternalLink className="h-4 w-4" />
+                  </h3>
+                  <p className="mt-3 text-muted-foreground">{project.summary}</p>
+                  <p className="mt-4 text-sm font-medium text-foreground">View on GitHub →</p>
+                </div>
+              </LiquidCard>
+            </a>
           ))}
         </div>
       </section>
