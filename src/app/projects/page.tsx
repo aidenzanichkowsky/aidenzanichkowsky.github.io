@@ -62,6 +62,25 @@ export default function ProjectsPage() {
             </Card>
           </a>
 
+          <a
+            href="https://github.com/aidenzanichkowsky/gif-project"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-transform duration-300 hover:-translate-y-1.5 block"
+          >
+            <Card className="rounded-[20px] border border-black/6 bg-white/80 py-0 shadow-[0_20px_55px_-45px_rgba(15,23,42,0.4)] h-full cursor-pointer hover:border-emerald-500/40 hover:shadow-[0_20px_55px_-40px_rgba(16,185,129,0.25)] transition-all duration-300">
+              <CardHeader className="px-5 pt-5">
+                <CardTitle className="flex items-center gap-2">
+                  <span>🎞️</span> Python Animated GIF Generator
+                </CardTitle>
+                <CardDescription>Python • ImageIO • Git</CardDescription>
+              </CardHeader>
+              <CardContent className="px-5 pb-5 text-sm leading-7 text-muted-foreground">
+                A Python script that reads two PNG images and combines them into a looping animated GIF using ImageIO. Explore the source code and generated GIF on GitHub.
+              </CardContent>
+            </Card>
+          </a>
+
           <Card className="rounded-[20px] border border-black/6 bg-white/80 py-0 shadow-[0_20px_55px_-45px_rgba(15,23,42,0.4)] h-full opacity-70">
             <CardHeader className="px-5 pt-5">
               <CardTitle className="flex items-center gap-2 text-muted-foreground">
