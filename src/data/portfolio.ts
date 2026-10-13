@@ -42,20 +42,13 @@ export const projects: Array<{
   title: string;
   summary: string;
   tags: string[];
-  image: string;
+  href: string;
 }> = [
   {
-    id: "nexus-ai",
-    title: "Nexus AI Analytics",
-    summary: "Predictive modeling dashboard utilizing real-time data streams and neural networks to forecast market trends.",
-    tags: ["React", "TensorFlow"],
-    image: "/images/nexus-ai.png"
+    id: "python-gif-generator",
+    title: "Python Animated GIF Generator",
+    summary: "A Python script that uses ImageIO to combine two PNG images into a looping animated GIF with configurable frame timing.",
+    tags: ["Python", "ImageIO", "Git"],
+    href: "https://github.com/aidenzanichkowsky/gif-project",
   },
-  {
-    id: "devsync-cli",
-    title: "DevSync CLI",
-    summary: "Automated deployment toolchain for streamlined CI/CD pipelines.",
-    tags: ["Node.js"],
-    image: "/images/devsync-cli.png"
-  }
 ];
